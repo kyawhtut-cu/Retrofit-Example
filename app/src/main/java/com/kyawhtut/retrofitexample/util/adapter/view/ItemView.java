@@ -41,7 +41,7 @@ public class ItemView extends BaseView<MeMeResponseList> {
     public void bind(MeMeResponseList data) {
         super.data = data;
         memeSize.setText(data.imgInfoList.size);
-        mLoadImg.setOnClickListener(v -> {
+//        mLoadImg.setOnClickListener(v -> {
             Glide.with(itemView.getContext())
                     .load(data.imgLoc)
                     .thumbnail(0.1f)
@@ -49,6 +49,6 @@ public class ItemView extends BaseView<MeMeResponseList> {
                     .crossFade()
                     .diskCacheStrategy(DiskCacheStrategy.SOURCE)
                     .into(memeImg);
-        });
+//        });
     }
 }
