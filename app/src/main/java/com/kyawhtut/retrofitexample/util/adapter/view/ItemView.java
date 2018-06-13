@@ -41,14 +41,12 @@ public class ItemView extends BaseView<MeMeResponseList> {
     public void bind(MeMeResponseList data) {
         super.data = data;
         memeSize.setText(data.imgInfoList.size);
-//        mLoadImg.setOnClickListener(v -> {
-            Glide.with(itemView.getContext())
-                    .load(data.imgLoc)
-                    .thumbnail(0.1f)
-                    .skipMemoryCache(false)
-                    .crossFade()
-                    .diskCacheStrategy(DiskCacheStrategy.SOURCE)
-                    .into(memeImg);
-//        });
+        Glide.with(itemView.getContext())
+                .load(data.imgLoc)
+                .thumbnail(0.1f)
+                .skipMemoryCache(false)
+                .crossFade()
+                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                .into(memeImg);
     }
 }
