@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="150dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/meme_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/meme_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#75757575"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="356kb"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/load_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:foreground="?attr/actionBarItemBackground"
+            android:padding="4dp"
+            android:src="@drawable/ic_refresh_black" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/meme_img"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>
